@@ -2,15 +2,24 @@
 {
      background-color: rgba(19, 13, 102, 0.859);
      height: 2.4em;
+     position: relative;
+     margin: 0;
+     padding: 0;
 }
 .navbar{
    font-weight: 600; 
 }
 
+
   .underline {
     display: inline-block;
     position: relative;
     
+  }
+  .nav-item{
+    font-size: 21px;
+   
+     font-family:New Century Schoolbook, TeX Gyre Schola, serif; 
   }
   
   .underline:after {

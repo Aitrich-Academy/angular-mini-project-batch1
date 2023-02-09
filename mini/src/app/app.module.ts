@@ -5,12 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { MiddleComponent } from './middle/middle.component';
+import { CovidSectionComponent } from './covid-section/covid-section.component';
+import { NewsComponent } from './news/news.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
-    CarouselComponent
+    CarouselComponent,
+    MiddleComponent,
+    CovidSectionComponent,
+    NewsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
