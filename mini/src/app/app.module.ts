@@ -8,7 +8,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { MiddleComponent } from './middle/middle.component';
 import { CovidSectionComponent } from './covid-section/covid-section.component';
 import { NewsComponent } from './news/news.component';
-import { FooterComponent } from './footer/footer.component';
+
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import { FooterComponent } from './footer/footer.component';
     MiddleComponent,
     CovidSectionComponent,
     NewsComponent,
-    FooterComponent
+  
   ],
   imports: [
     BrowserModule,
