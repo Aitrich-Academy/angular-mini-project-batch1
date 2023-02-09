@@ -7,6 +7,7 @@ import { doctor } from 'src/model/profile';
   styleUrls: ['./department.component.css']
 })
 export class DepartmentComponent {
+  department:string=' ';
   show:boolean=false;
   datas:doctor[]= [
     {
@@ -60,7 +61,9 @@ export class DepartmentComponent {
     this.show=true;
     this.store=item;
   }
-
+  getdepartmentdetails(depart:string){
+    this.department=depart;
+  }
 }
 
     

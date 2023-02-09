@@ -5,7 +5,10 @@ import { Component,Input, Output,EventEmitter} from '@angular/core';
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css']
 })
+
 export class ProfileComponent {
+
+
   show:boolean=false;
   @Input()
   x:any;

@@ -2,7 +2,7 @@
 <div class="row" *ngIf="show == false">
     <div class="container">
         <div class="col-md-12 col-xs-12 col-sm-12 col-xl-12 ">
-            <div buttons style="margin-top: -95px;">
+            <div class="dept-buttons" style="margin-top: -95px;">
             <button class="ms-5"><b>ORTHOPEDICS</b></button> &nbsp; &nbsp;
             <button class="ms-5" ><b>AUDIOLOGY</b></button>  &nbsp; &nbsp;
             <button class="ms-5"><b>CARDIOLOGY</b></button>  &nbsp; &nbsp;
@@ -20,7 +20,7 @@
 <div class="row ">
     <div class="col-md-1"> </div>
     <div class="col-md-3">
-    <img class="ms-5 mt-5" src="{{x.image}}">
+    <img class="ms-5 mt-5 docter-img" src="{{x.image}}">
     </div>
    <div class="col-md-7">
     <h2 class="mt-5">DR.{{x.name}}</h2><br>
@@ -35,14 +35,108 @@
 </div>
 <div class="row">
     <div class="col-md-4"> </div>
-    <div class="col-md-8"> 
-        <button  style="width: 201px;  border-radius: 1px;  background-color: black;  color: white;font-size: 17px;box-shadow: 0px 0px 0px;"> Book Appointment</button> 
-        <button style="background-color: black;
-        color: white;
-        font-size: 20px;
-        border-radius: 1px; box-shadow: 0px 0px 0px;" class="ms-3" (click)="goBack()"> Back</button>
+    <div class="col-md-8">        
+        
+        <!-- Button trigger modal -->
+<button  class="btn booking" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Book Appointment
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            
+                
+                <span>
+                    <img style="margin-top: -36px;
+                    width: 202px;
+                    height: 202px;
+                    margin-left: 4px;" src="assets/images/logodoccure.png" alt="">
+                </span>
+                <hr>
+                <form action="#" method="GET" name="myform" onSubmit="return validateform()">
+                    <div class="card-details">
+                        <div class="card-box">
+                            <span class="details">Name</span>
+                            <input class="input-box" type="text" placeholder="enter name" name="fname">
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <div class="card-box">
+                            <span class="details">Email</span>
+                            <input class="input-box" type="email" placeholder="doccure@gmail.com">
+                        </div>
+                    </div>
+                    <div class="card-details">
+                        <div class="card-box">
+                            <span class="details">Phone Number</span>
+                            <input class="input-box" id="third" type="number" placeholder="enter phonenumber" name="pname">
+                        </div>
+                    </div>
+                    <div class="time-buttons">
+                        <label class="btnh"><input style="margin:6px" type="radio" value="1" name="fooby[1][]">8.00 AM-11.AM</label>
+                        <label class="btnh"><input style="margin:6px" type="radio" value="1" name="fooby[1][]">7.00 PM-10.PM</label>
+<!-- 
+                        <button class="btnh">8.00 AM-11.AM </button>&nbsp;&nbsp;
+                        <button class="btnh">7.00 PM-10.PM </button> -->
+                    </div>
+                    <div class="boooking-button">
+                      
+                        <button onclick="greet()" type="submit"  value="submit" class="btn btn-booking">BOOK AN APPOINTMENT</button>
+                    </div>
+                </form>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+        
+        <button  class="ms-3 booking" (click)="goBack()"> Back</button>
     </div>
     
 
 </div>
 
+
+<!-- <div class="box mt-5">
+    <i class="fa fa-times" style="font-size:25px;color:rgb(167, 157, 157)"></i>
+    <span>
+        <img style="margin-top: -36px;
+        width: 202px;
+        height: 202px;
+        margin-left: 4px;" src="assets/images/logodoccure.png" alt="">
+    </span>
+    <hr>
+    <form action="#">
+        <div class="card-details">
+            <div class="card-box">
+                <span class="details">Name</span>
+                <input type="text" placeholder="enter name">
+            </div>
+        </div>
+        <div class="card-details">
+            <div class="card-box">
+                <span class="details">Email</span>
+                <input type="text" placeholder="doccure@gmail.com">
+            </div>
+        </div>
+        <div class="card-details">
+            <div class="card-box">
+                <span class="details">Phone Number</span>
+                <input id="third" type="text" placeholder="enter phonenumber">
+            </div>
+        </div>
+        <div class="time-buttons">
+            <button class="btnh">8.00 AM-11.AM </button>&nbsp;&nbsp;
+            <button class="btnh">7.00 PM-10.PM </button>
+        </div>
+        <div class="boooking-button">
+            <button class="btn btn-booking">BOOK AN APPOINTMENT</button>
+        </div>
+    </form>
+</div> -->
