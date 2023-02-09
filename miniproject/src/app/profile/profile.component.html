@@ -2,24 +2,26 @@
 <div class="row" *ngIf="show == false">
     <div class="container">
         <div class="col-md-12 col-xs-12 col-sm-12 col-xl-12 ">
-            <div class="dept-buttons" style="margin-top: -95px;">
-            <button class="ms-5"><b>ORTHOPEDICS</b></button> &nbsp; &nbsp;
-            <button class="ms-5" ><b>AUDIOLOGY</b></button>  &nbsp; &nbsp;
-            <button class="ms-5"><b>CARDIOLOGY</b></button>  &nbsp; &nbsp;
-            <button class="ms-5"><b>PSYCHOLOGY</b></button>  &nbsp; &nbsp;
-            <button class="ms-5"><b>DIETICIAN</b></button>  &nbsp; &nbsp;
-            <button class="ms-5"><b>ENDOCRINOLOGY</b></button> &nbsp; &nbsp;
-            <button class="ms-5"><b>NEPHROLOGY</b></button>  &nbsp; &nbsp;
-            <button class="ms-5"><b>PEDIATRICS</b></button>  
+            <div class="dept-buttons" style="margin-top: -95px; display: flex;
+            justify-content: center;">
+                 <button  class="ms-5"><b>ORTHOPEDICS</b></button> &nbsp; &nbsp;
+                 <button  class="ms-5" ><b>AUDIOLOGY</b></button>  &nbsp; &nbsp;
+                 <button (click)="getdepartmentdetails('Cardiology')" class="ms-5"><b>CARDIOLOGY</b></button>  &nbsp; &nbsp;
+                 <button  class="ms-5"><b>PSYCHOLOGY</b></button>  &nbsp; &nbsp;
+                 <button (click)="getdepartmentdetails('Dietician')" class="ms-5"><b>DIETICIAN</b></button>  &nbsp; &nbsp;
+                 <button (click)="getdepartmentdetails('Endocrinology')" class="ms-5"><b>ENDOCRINOLOGY</b></button> &nbsp; &nbsp;
+                 <button  class="ms-5"><b>NEPHROLOGY</b></button>  &nbsp; &nbsp;
+                 <button (click)="getdepartmentdetails('Pediatrician')" class="ms-5"><b>PEDIATRICS</b></button>    
             </div>
 
             </div>
     </div>
 </div>
 
-<div class="row ">
+<div class="row" *ngIf="show == false" >
+   
     <div class="col-md-1"> </div>
-    <div class="col-md-3">
+    <div *ngIf="x.depart == department || department ==' '" class="col-md-3">
     <img class="ms-5 mt-5 docter-img" src="{{x.image}}">
     </div>
    <div class="col-md-7">
@@ -32,11 +34,10 @@
     <h4><b>{{x.depart}}</b></h4>
 
    </div>
-</div>
-<div class="row">
-    <div class="col-md-4"> </div>
-    <div class="col-md-8">        
-        
+
+
+           
+    <div class="two-buttons" style="margin-left: 511px;">  
         <!-- Button trigger modal -->
 <button  class="btn booking" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
     Book Appointment
@@ -97,46 +98,7 @@
   </div>
         
         <button  class="ms-3 booking" (click)="goBack()"> Back</button>
-    </div>
-    
+ 
+    </div>  
 
 </div>
-
-
-<!-- <div class="box mt-5">
-    <i class="fa fa-times" style="font-size:25px;color:rgb(167, 157, 157)"></i>
-    <span>
-        <img style="margin-top: -36px;
-        width: 202px;
-        height: 202px;
-        margin-left: 4px;" src="assets/images/logodoccure.png" alt="">
-    </span>
-    <hr>
-    <form action="#">
-        <div class="card-details">
-            <div class="card-box">
-                <span class="details">Name</span>
-                <input type="text" placeholder="enter name">
-            </div>
-        </div>
-        <div class="card-details">
-            <div class="card-box">
-                <span class="details">Email</span>
-                <input type="text" placeholder="doccure@gmail.com">
-            </div>
-        </div>
-        <div class="card-details">
-            <div class="card-box">
-                <span class="details">Phone Number</span>
-                <input id="third" type="text" placeholder="enter phonenumber">
-            </div>
-        </div>
-        <div class="time-buttons">
-            <button class="btnh">8.00 AM-11.AM </button>&nbsp;&nbsp;
-            <button class="btnh">7.00 PM-10.PM </button>
-        </div>
-        <div class="boooking-button">
-            <button class="btn btn-booking">BOOK AN APPOINTMENT</button>
-        </div>
-    </form>
-</div> -->
