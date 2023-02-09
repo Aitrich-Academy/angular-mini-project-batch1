@@ -1,5 +1,111 @@
+<<<<<<< HEAD
 
     
+=======
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: "Poppins" , sans-serif;
+   }
+   body{
+     min-height: 100vh;
+     width: 100%;
+     background: #EEECEB;
+     margin-top: 100px;
+   }
+   footer{
+   
+    margin-top: 150px;
+     background:#AED6F1  ;
+     width: 100%;
+     bottom: 0;
+     left: 0;
+   }
+ 
+   
+   footer .content{
+     max-width: 1250px;
+     margin: auto;
+     padding: 30px 40px 40px 40px;
+   }
+   footer .content .top{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     margin-bottom: 50px;
+   }
+   
+   footer .content .link-boxes{
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+   }
+   
+   .content .link-boxes .box .link_name{
+     color:blue;
+     font-size: 18px;
+     font-weight: 400;
+     margin-bottom: 10px;
+     position: relative;
+   }
+   
+   .content .link-boxes .box li{
+     margin: 6px 0;
+     list-style: none;
+   }
+   .content .link-boxes .box li a{
+     color:#3E5768;
+     font-size: 14px;
+     font-weight: 400;
+     text-decoration: none;
+     opacity: 0.8;
+     transition: all 0.4s ease
+   }
+   .content .link-boxes .box li a:hover{
+     opacity: 1;
+     text-decoration: underline;
+   }
+   .content .link-boxes .input-box{
+     margin-right: 55px;
+   }
+   .link-boxes .input-box input{
+     height: 40px;
+     width: calc(100% + 55px);
+     outline: none;
+     border: 2px solid #AFAFB6;
+     background:white;
+     border-radius: 4px;
+     padding: 0 15px;
+     font-size: 15px;
+     color: #000000;
+     margin-top: 5px;
+   }
+   .link-boxes .input-box input::placeholder{
+     color: #85929E;
+     font-size: 16px;
+   }
+   .link-boxes .input-box input[type="button"]{
+     background:  #0C125C;
+     color:  #AED6F1;
+     border: none;
+     font-size: 18px;
+     font-weight: 500;
+     margin: 4px 0;
+     opacity: 0.8;
+     cursor: pointer;
+     transition: all 0.4s ease;
+   }
+   .input-box input[type="button"]:hover{
+     opacity: 1;
+     background-color: #085B94;
+   
+   }
+   footer .bottom-details{
+     width: 100%;
+     background: #033D64;
+     height: 40px;
+>>>>>>> aa68ca1453b19a50051cb3ef463490bd1a3cba84
      
      
      
