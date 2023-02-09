@@ -21,6 +21,7 @@ export class NewsComponent implements OnInit {
       dis:"Doccure at the forefront of Digital Heart Failure Management System",
     },
   ]
+  
   constructor() { }
 
   ngOnInit() {
