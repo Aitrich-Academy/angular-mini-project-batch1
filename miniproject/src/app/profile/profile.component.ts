@@ -23,8 +23,9 @@ export class ProfileComponent {
     this.back.emit(this.show);
     console.log();
   }
-  getdepartmentdetails(depart:string){
-    this.department=depart;
+  getdep(depart:string){
+    this.show==true;
+
   }
 
 }
